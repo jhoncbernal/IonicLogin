@@ -22,5 +22,11 @@ export class SignUpPage {
   createAccount(){
     this.auth.createUserWithEmailAndPassword(this.email,this.password);
   }
+  createAccountWithGoogle(){
+    this.auth.createUserWithGoogle();
+  }
+  createAccountWithFacebook(){
+    this.auth.createUserWithFacebook();
+  }
 
 }

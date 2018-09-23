@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {Authentication} from '../services/authentication';
+import { Uploader } from './../services/uploader';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
@@ -37,9 +38,10 @@ import {firebaseConfig} from '../environments/firebase-config';
     SignUpPage
   ],
   providers: [
-    StatusBar,
-    Authentication,
+    StatusBar,    
     SplashScreen,
+    Authentication,
+    Uploader,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
